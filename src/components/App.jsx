@@ -6,6 +6,7 @@ import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Button } from './Button/Button';
 import { Loader } from './Loader/Loader';
 import { Modal } from './Modal/Modal';
+import css from './App.module.css';
 
 export const paramsForNotify = {
   position: 'center-center',
@@ -137,7 +138,7 @@ export class App extends Component {
         <Searchbar onSubmitSearchBar={this.onSubmitSearchBar} />
         {loading && <Loader />}
         {/* {error && <h2>Error</h2>} */}
-        <div>
+        <div className={css.container}>
           <ImageGallery
             photos={photos}
             onClickImageItem={this.onClickOpenModal}
